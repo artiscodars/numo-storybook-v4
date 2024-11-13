@@ -1,0 +1,9 @@
+.p-icon-field {
+    .p-input-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        aspect-ratio: 1;
+        display: flex;
+    }
+}

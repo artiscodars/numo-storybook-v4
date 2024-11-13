@@ -1,0 +1,6 @@
+<span *ngIf="type === 'primeng'" class="pi" [ngClass]="icon" [class]="class"
+    [ngStyle]="{'font-size': size,color: color}"></span>
+<span *ngIf="type === 'iconify'" class="iconify" [attr.data-icon]="icon" [class]="class"
+    [ngStyle]="{'font-size': size, color: color}"></span>
+<span *ngIf="type === 'material-symbols'" class="material-symbols-rounded" [class]="class"
+    [ngStyle]="{'font-size': size, color: color}">{{ icon }}</span>

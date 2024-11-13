@@ -1,0 +1,43 @@
+.p-menu {
+  padding: $verticalMenuPadding;
+  background: $menuBg;
+  color: $menuTextColor;
+  border: $menuBorder;
+  border-radius: $borderRadius;
+  width: $menuWidth;
+
+  .p-menuitem {
+    @include menuitem();
+    .p-menuitem-content {
+      .p-menuitem-link {
+        color: unset;
+      }
+    }
+  }
+
+  &.p-menu-overlay {
+    background: $overlayMenuBg;
+    border: $overlayMenuBorder;
+    box-shadow: $overlayMenuShadow;
+  }
+
+  .p-submenu-header {
+    margin: $submenuHeaderMargin; 
+    color: $submenuHeaderTextColor;
+    background: $submenuHeaderBg;
+    font-weight: $submenuHeaderFontWeight;
+    border-top-right-radius: $submenuHeaderBorderRadius;
+    border-top-left-radius: $submenuHeaderBorderRadius;
+    padding: 5px 0px;
+  }
+
+  .p-menuitem-separator {
+    border-top: $divider;
+    margin: $menuSeparatorMargin;
+    padding: 0px;
+  }
+
+  .p-menuitem-badge {
+    @include menuitem-badge();
+  }
+}

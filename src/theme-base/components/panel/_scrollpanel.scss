@@ -1,0 +1,9 @@
+.p-scrollpanel {
+    .p-scrollpanel-bar {
+        background:$scrollPanelTrackBg;
+
+        &:focus-visible {
+            @include focused();
+        }
+    }
+}

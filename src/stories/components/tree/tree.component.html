@@ -1,0 +1,45 @@
+@if (events) {
+    <div class="card flex justify-content-center">
+        <p-toast />
+        <p-tree
+            [value]="files"
+            class="w-full md:w-30rem"
+            selectionMode="single"
+            [(selection)]="selectedFile"
+            (onNodeExpand)="nodeExpand($event)"
+            (onNodeCollapse)="nodeCollapse($event)"
+            (onNodeSelect)="nodeSelect($event)"
+            (onNodeUnselect)="nodeUnselect($event)"
+        />
+    </div>
+}
+
+@if(lazyLoading){
+    <div class="card flex flex-wrap p-fluid gap-3">
+        <div class="flex-auto md:flex md:justify-content-start md:align-items-center flex-column">
+            <label for="mask" class="font-bold block mb-2">Mask Mode</label>
+            <p-tree 
+                class="w-full md:w-30rem" 
+                [value]="nodes" 
+                (onNodeExpand)="onNodeExpand($event)" 
+                [loading]="loading" />
+        </div>
+        <div class="flex-auto md:flex md:justify-content-start md:align-items-center flex-column">
+            <label for="icon" class="font-bold block mb-2">Icon Mode</label>
+            <p-tree 
+                class="w-full md:w-30rem" 
+                [value]="nodes2" 
+                loadingMode="icon" 
+                (onNodeExpand)="onNodeExpand2($event)" />
+        </div>
+    </div>
+}
+
+@if(virtualScroll){
+    <p-tree 
+    class="w-full md:w-30rem" 
+    scrollHeight="250px" 
+    [virtualScroll]="true" 
+    [virtualScrollItemSize]="46" 
+    [value]="files" />
+}

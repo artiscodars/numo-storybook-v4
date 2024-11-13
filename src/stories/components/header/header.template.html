@@ -1,0 +1,51 @@
+<div class="header flex align-items-center text-white justify-content-between gap-3 ">
+    <div class="flex align-items-center font-bold text-2xl h-10">
+        <span #menuButton (click)="toggleMenu($event)" [ngClass]="isMenuVisible ? 'pi pi-times' : 'pi pi-bars'"
+            class="icon text-gray-800 cursor-pointer">
+        </span>
+
+
+
+        <numo-left-menu [items]="items" class="left-menu"></numo-left-menu>
+
+        <img class="ml-3" height="30" src="logo.png" alt="logo" />
+    </div>
+    <div class="flex justify-center relative w-30rem">
+        <p-iconField iconPosition="right" class="w-full">
+            <p-inputIcon>
+                <numo-icon icon="search" type="material-symbols" class="text-2xl"></numo-icon>
+            </p-inputIcon>
+            <input type="text" pInputText placeholder="Meklēt" class="w-full" />
+        </p-iconField>
+    </div>
+
+    <div class="flex justify-content-end">
+        <p-menu #userMenu [model]="userMenuItems" [popup]="true">
+            <ng-template pTemplate="submenuheader" let-item>
+                <span class="font-bold">{{ item.label }}</span>
+            </ng-template>
+            <ng-template pTemplate="item" let-item>
+                <a pRipple class="flex align-items-center p-menuitem-link">
+                    <numo-icon [icon]="item.icon" [type]="item.type"
+                        class="text-2xl flex align-items-center"></numo-icon>
+                    <span class="ml-2">{{ item.label }}</span>
+
+                    <span *ngIf="item.shortcut"
+                        class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">
+                        {{ item.shortcut }}
+                    </span>
+                </a>
+            </ng-template>
+        </p-menu>
+
+        <div (click)="showUserMenu($event)" class="usermenu cursor-pointer py-1">
+            <span class="hidden sm:block">Jānis Bērziņš</span>
+            <span class=" sm:hidden block p-2 bg-blue-200 border-circle ">JB</span>
+            <div class="caret"></div>
+            <div class="text-ellipsis text-xs hidden sm:block">
+                Liepājas valstspilsētas pašvaldības aģentūra "Liepājas
+                Sabiedriskais transports"
+            </div>
+        </div>
+    </div>
+</div>

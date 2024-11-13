@@ -1,0 +1,28 @@
+<div class="pb-2">
+    @if(notificationCount !== '0'){
+    <p-button label="Uzdevumi" iconPos="left" class="white-outlined-button" styleClass="w-full text-left py-3"
+        [badge]="notificationCount" badgeClass="p-badge-success" />
+    }
+    @if(notificationCount === '0'){
+    <p-button label="Uzdevumi" iconPos="left" class="white-outlined-button" styleClass="w-full text-left py-3" />
+    }
+</div>
+<p-panelMenu [model]="items" [styleClass]="className">
+    <ng-template pTemplate="item" let-item>
+        <a pRipple class="flex align-items-center px-3 py-2 cursor-pointer" [ngClass]="{ 'py-3': isFirstLevel(item) }">
+            <span class="p-panelmenu-icon p-panelmenu-icon-chevron pi" *ngIf="item.items.length > 0" [ngClass]="{
+                    'pi-chevron-right': !item.expanded,
+                    'pi-chevron-down': item.expanded,
+                }"></span>
+            <numo-icon [icon]="item.icon" [type]="item.type" [class]="item.iconClass ? item.iconClass : 'text-2xl'"
+                class="flex align-items-center"></numo-icon>
+            <span class="ml-2 font-medium">
+                {{ item.label }}
+            </span>
+            <span *ngIf="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">
+                {{ item.shortcut }}
+            </span>
+
+        </a>
+    </ng-template>
+</p-panelMenu>

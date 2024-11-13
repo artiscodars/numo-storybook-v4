@@ -1,0 +1,4 @@
+- **Positioning** (top, left, right): Default is **top**, but if it doesn't work for some reason, use **left** or **right**.
+- **Formatting**.
+- **Components that should use tooltips by default**: Icons, buttons, or things that are not self-explanatory. Use tooltips for icons and buttons where a more detailed comment is needed.
+- The tooltip is **opened by clicking** on the icon/link.
