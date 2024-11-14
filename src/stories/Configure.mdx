@@ -1,5 +1,4 @@
-import { Meta } from "@storybook/blocks";
-
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
 import Github from "./assets/github.svg";
 import Discord from "./assets/discord.svg";
 import Youtube from "./assets/youtube.svg";
@@ -15,350 +14,307 @@ import Accessibility from "./assets/accessibility.png";
 import Theming from "./assets/theming.png";
 import AddonLibrary from "./assets/addon-library.png";
 
-export const RightArrow = () => <svg 
-    viewBox="0 0 14 14" 
-    width="8px" 
-    height="14px" 
-    style={{ 
-      marginLeft: '4px',
-      display: 'inline-block',
-      shapeRendering: 'inherit',
-      verticalAlign: 'middle',
-      fill: 'currentColor',
-      'path fill': 'currentColor'
-    }}
->
-  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-</svg>
+export const RightArrow = () => (
+    <svg
+        viewBox="0 0 14 14"
+        width="8px"
+        height="14px"
+        style={{
+            marginLeft: "4px",
+            display: "inline-block",
+            shapeRendering: "inherit",
+            verticalAlign: "middle",
+            fill: "currentColor",
+            "path fill": "currentColor",
+        }}
+    >
+        <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
+    </svg>
+);
 
-<Meta title="Configure your project" />
+<Meta title="Wellcome to NUMO storybook" />
 
-<div className="sb-container">
-  <div className='sb-section-title'>
-    # Configure your project
-
-    Because Storybook works separately from your app, you'll need to configure it for your specific stack and setup. Below, explore guides for configuring Storybook with popular frameworks and tools. If you get stuck, learn how you can ask for help from our community.
-  </div>
-  <div className="sb-section">
-    <div className="sb-section-item">
-      <img
-        src={Styling}
-        alt="A wall of logos representing different styling technologies"
-      />
-      <h4 className="sb-section-item-heading">Add styling and CSS</h4>
-      <p className="sb-section-item-paragraph">Like with web applications, there are many ways to include CSS within Storybook. Learn more about setting up styling within Storybook.</p>
-      <a
-        href="https://storybook.js.org/docs/configure/styling-and-css/?renderer=angular"
-        target="_blank"
-      >Learn more<RightArrow /></a>
-    </div>
-    <div className="sb-section-item">
-      <img
-        src={Context}
-        alt="An abstraction representing the composition of data for a component"
-      />
-      <h4 className="sb-section-item-heading">Provide context and mocking</h4>
-      <p className="sb-section-item-paragraph">Often when a story doesn't render, it's because your component is expecting a specific environment or context (like a theme provider) to be available.</p>
-      <a
-        href="https://storybook.js.org/docs/writing-stories/decorators/?renderer=angular#context-for-mocking"
-        target="_blank"
-      >Learn more<RightArrow /></a>
-    </div>
-    <div className="sb-section-item">
-      <img src={Assets} alt="A representation of typography and image assets" />
-      <div>
-        <h4 className="sb-section-item-heading">Load assets and resources</h4>
-        <p className="sb-section-item-paragraph">To link static files (like fonts) to your projects and stories, use the
-        `staticDirs` configuration option to specify folders to load when
-        starting Storybook.</p>
-        <a
-          href="https://storybook.js.org/docs/configure/images-and-assets/?renderer=angular"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="sb-container">
-  <div className='sb-section-title'>
-    # Do more with Storybook
-
-    Now that you know the basics, let's explore other parts of Storybook that will improve your experience. This list is just to get you started. You can customise Storybook in many ways to fit your needs.
-  </div>
-
-  <div className="sb-section">
-    <div className="sb-features-grid">
-      <div className="sb-grid-item">
-        <img src={Docs} alt="A screenshot showing the autodocs tag being set, pointing a docs page being generated" />
-        <h4 className="sb-section-item-heading">Autodocs</h4>
-        <p className="sb-section-item-paragraph">Auto-generate living,
-          interactive reference documentation from your components and stories.</p>
-        <a
-          href="https://storybook.js.org/docs/writing-docs/autodocs/?renderer=angular"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-      <div className="sb-grid-item">
-        <img src={Share} alt="A browser window showing a Storybook being published to a chromatic.com URL" />
-        <h4 className="sb-section-item-heading">Publish to Chromatic</h4>
-        <p className="sb-section-item-paragraph">Publish your Storybook to review and collaborate with your entire team.</p>
-        <a
-          href="https://storybook.js.org/docs/sharing/publish-storybook/?renderer=angular#publish-storybook-with-chromatic"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-      <div className="sb-grid-item">
-        <img src={FigmaPlugin} alt="Windows showing the Storybook plugin in Figma" />
-        <h4 className="sb-section-item-heading">Figma Plugin</h4>
-        <p className="sb-section-item-paragraph">Embed your stories into Figma to cross-reference the design and live
-          implementation in one place.</p>
-        <a
-          href="https://storybook.js.org/docs/sharing/design-integrations/?renderer=angular#embed-storybook-in-figma-with-the-plugin"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-      <div className="sb-grid-item">
-        <img src={Testing} alt="Screenshot of tests passing and failing" />
-        <h4 className="sb-section-item-heading">Testing</h4>
-        <p className="sb-section-item-paragraph">Use stories to test a component in all its variations, no matter how
-          complex.</p>
-        <a
-          href="https://storybook.js.org/docs/writing-tests/?renderer=angular"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-      <div className="sb-grid-item">
-        <img src={Accessibility} alt="Screenshot of accessibility tests passing and failing" />
-        <h4 className="sb-section-item-heading">Accessibility</h4>
-        <p className="sb-section-item-paragraph">Automatically test your components for a11y issues as you develop.</p>
-        <a
-          href="https://storybook.js.org/docs/writing-tests/accessibility-testing/?renderer=angular"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-      <div className="sb-grid-item">
-        <img src={Theming} alt="Screenshot of Storybook in light and dark mode" />
-        <h4 className="sb-section-item-heading">Theming</h4>
-        <p className="sb-section-item-paragraph">Theme Storybook's UI to personalize it to your project.</p>
-        <a
-          href="https://storybook.js.org/docs/configure/theming/?renderer=angular"
-          target="_blank"
-        >Learn more<RightArrow /></a>
-      </div>
-    </div>
-  </div>
-</div>
-<div className='sb-addon'>
-  <div className='sb-addon-text'>
-    <h4>Addons</h4>
-    <p className="sb-section-item-paragraph">Integrate your tools with Storybook to connect workflows.</p>
-    <a
-        href="https://storybook.js.org/addons/"
-        target="_blank"
-      >Discover all addons<RightArrow /></a>
-  </div>
-  <div className='sb-addon-img'>
-    <img src={AddonLibrary} alt="Integrate your tools with Storybook to connect workflows." />
-  </div>
+<div>
+    <h1>Wellcome to NUMO storybook</h1>
+    <p>(v1.0 - 25.09.2024)</p>
+    <p>
+        The Storybook design system provides a unified framework for building UI
+        components. It allows to create, test, and manage components in
+        isolation, ensuring they work consistently across different states. By
+        using Storybook, you can quickly prototype and reuse components,
+        reducing development time and keeping the UI scalable. Everything is
+        documented and version-controlled, so you can focus on building without
+        worrying about design inconsistencies.
+    </p>
 </div>
 
-<div className="sb-section sb-socials">
-    <div className="sb-section-item">
-      <img src={Github} alt="Github logo" className="sb-explore-image"/>
-      Join our contributors building the future of UI development.
+## Typography
 
-      <a
-        href="https://github.com/storybookjs/storybook"
-        target="_blank"
-      >Star on GitHub<RightArrow /></a>
-    </div>
-    <div className="sb-section-item">
-      <img src={Discord} alt="Discord logo" className="sb-explore-image"/>
-      <div>
-        Get support and chat with frontend developers.
+We've standardized our typography to ensure consistent text across the app. Use the predefined tokens for font family, size, weight, and line height. The base font is "Roboto", sans-serif with a default size of 14px and line height of 1.5. These variables are set globally, so you don't need to manually adjust text styles—just apply the tokens where needed.
 
-        <a
-          href="https://discord.gg/storybook"
-          target="_blank"
-        >Join Discord server<RightArrow /></a>
-      </div>
-    </div>
-    <div className="sb-section-item">
-      <img src={Youtube} alt="Youtube logo" className="sb-explore-image"/>
-      <div>
-        Watch tutorials, feature previews and interviews.
+```css
+font-family: "Roboto", sans-serif;
+```
 
-        <a
-          href="https://www.youtube.com/@chromaticui"
-          target="_blank"
-        >Watch on YouTube<RightArrow /></a>
-      </div>
-    </div>
-    <div className="sb-section-item">
-      <img src={Tutorials} alt="A book" className="sb-explore-image"/>
-      <p>Follow guided walkthroughs on for key workflows.</p>
+# Color Palette
 
-      <a
-          href="https://storybook.js.org/tutorials/"
-          target="_blank"
-        >Discover tutorials<RightArrow /></a>
-    </div>
-</div>
+Our color palette includes predefined variables for primary, secondary, and status colors (like success and warning). Use these tokens directly in your components for background, borders, and text. They are designed to meet accessibility standards, so by sticking to the palette, you'll ensure consistent theming and contrast throughout the UI.
 
-<style>
-  {`
-  .sb-container {
-    margin-bottom: 48px;
-  }
+## Primary Colors
 
-  .sb-section {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
+<ColorPalette>
+    <ColorItem title="Primary Color" subtitle="#9ecaff" colors={["#9ecaff"]} />
+    <ColorItem
+        title="Primary Light Color"
+        subtitle="#d1e4ff"
+        colors={["#d1e4ff"]}
+    />
+    <ColorItem
+        title="Primary Dark Color"
+        subtitle="#62b0ff"
+        colors={["#62b0ff"]}
+    />
+    <ColorItem
+        title="Primary Darker Color"
+        subtitle="#3a95e7"
+        colors={["#3a95e7"]}
+    />
+    <ColorItem
+        title="Primary Text Color"
+        subtitle="#000000"
+        colors={["#000000"]}
+    />
+</ColorPalette>
 
-  img {
-    object-fit: cover;
-  }
+## Secondary Colors
 
-  .sb-section-title {
-    margin-bottom: 32px;
-  }
+<ColorPalette>
+    <ColorItem
+        title="Secondary Color"
+        subtitle="#b8c8de"
+        colors={["#b8c8de"]}
+    />
+    <ColorItem
+        title="Secondary Light Color"
+        subtitle="#d4e4fb"
+        colors={["#d4e4fb"]}
+    />
+    <ColorItem
+        title="Secondary Dark Color"
+        subtitle="#9dacc2"
+        colors={["#9dacc2"]}
+    />
+    <ColorItem
+        title="Secondary Darker Color"
+        subtitle="#8292a7"
+        colors={["#8292a7"]}
+    />
+    <ColorItem
+        title="Secondary Text Color"
+        subtitle="#000000"
+        colors={["#000000"]}
+    />
+</ColorPalette>
 
-  .sb-section a:not(h1 a, h2 a, h3 a) {
-    font-size: 14px;
-  }
+## Success Colors
 
-  .sb-section-item, .sb-grid-item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
+<ColorPalette>
+    <ColorItem title="Success Color" subtitle="#b7f1ae" colors={["#b7f1ae"]} />
+    <ColorItem
+        title="Success Light Color"
+        subtitle="#c9ffbf"
+        colors={["#c9ffbf"]}
+    />
+    <ColorItem
+        title="Success Dark Color"
+        subtitle="#86da80"
+        colors={["#86da80"]}
+    />
+    <ColorItem
+        title="Success Darker Color"
+        subtitle="#6cbd67"
+        colors={["#6cbd67"]}
+    />
+    <ColorItem
+        title="Success Text Color"
+        subtitle="#000000"
+        colors={["#000000"]}
+    />
+</ColorPalette>
 
-  .sb-section-item-heading {
-    padding-top: 20px !important;
-    padding-bottom: 5px !important;
-    margin: 0 !important;
-  }
-  .sb-section-item-paragraph {
-    margin: 0;
-    padding-bottom: 10px;
-  }
+## Warning Colors
 
-  .sb-chevron {
-    margin-left: 5px;
-  }
+<ColorPalette>
+    <ColorItem title="Warning Color" subtitle="#ffe17b" colors={["#ffe17b"]} />
+    <ColorItem
+        title="Warning Light Color"
+        subtitle="#fff0c7"
+        colors={["#fff0c7"]}
+    />
+    <ColorItem
+        title="Warning Dark Color"
+        subtitle="#e4c451"
+        colors={["#e4c451"]}
+    />
+    <ColorItem
+        title="Warning Darker Color"
+        subtitle="#c7a938"
+        colors={["#c7a938"]}
+    />
+    <ColorItem
+        title="Warning Text Color"
+        subtitle="#000000"
+        colors={["#000000"]}
+    />
+</ColorPalette>
 
-  .sb-features-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 32px 20px;
-  }
+## Danger Colors
 
-  .sb-socials {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
+<ColorPalette>
+    <ColorItem title="Danger Color" subtitle="#ffb4ab" colors={["#ffb4ab"]} />
+    <ColorItem
+        title="Danger Light Color"
+        subtitle="#ffdad6"
+        colors={["#ffdad6"]}
+    />
+    <ColorItem
+        title="Danger Dark Color"
+        subtitle="#ff897d"
+        colors={["#ff897d"]}
+    />
+    <ColorItem
+        title="Danger Darker Color"
+        subtitle="#ff5449"
+        colors={["#ff5449"]}
+    />
+    <ColorItem
+        title="Danger Text Color"
+        subtitle="#000000"
+        colors={["#000000"]}
+    />
+</ColorPalette>
 
-  .sb-socials p {
-    margin-bottom: 10px;
-  }
+## Info Colors
 
-  .sb-explore-image {
-    max-height: 32px;
-    align-self: flex-start;
-  }
+<ColorPalette>
+    <ColorItem title="Info Color" subtitle="#99d0d6" colors={["#99d0d6"]} />
+    <ColorItem
+        title="Info Light Color"
+        subtitle="#b5ecf2"
+        colors={["#b5ecf2"]}
+    />
+    <ColorItem
+        title="Info Dark Color"
+        subtitle="#7eb4ba"
+        colors={["#7eb4ba"]}
+    />
+    <ColorItem
+        title="Info Darker Color"
+        subtitle="#64999f"
+        colors={["#64999f"]}
+    />
+    <ColorItem
+        title="Info Text Color"
+        subtitle="#000000"
+        colors={["#000000"]}
+    />
+</ColorPalette>
 
-  .sb-addon {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    background-color: #EEF3F8;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    background: #EEF3F8;
-    height: 180px;
-    margin-bottom: 48px;
-    overflow: hidden;
-  }
+## Help Colors
 
-  .sb-addon-text {
-    padding-left: 48px;
-    max-width: 240px;
-  }
+<ColorPalette>
+    <ColorItem title="Help Color" subtitle="#ffeb3b" colors={["#ffeb3b"]} />
+    <ColorItem
+        title="Help Light Color"
+        subtitle="#fff9c4"
+        colors={["#fff9c4"]}
+    />
+    <ColorItem
+        title="Help Dark Color"
+        subtitle="#fbc02d"
+        colors={["#fbc02d"]}
+    />
+    <ColorItem
+        title="Help Darker Color"
+        subtitle="#f57f17"
+        colors={["#f57f17"]}
+    />
+    <ColorItem
+        title="Help Text Color"
+        subtitle="#000000"
+        colors={["#000000"]}
+    />
+</ColorPalette>
 
-  .sb-addon-text h4 {
-    padding-top: 0px;
-  }
+## Gray Colors
 
-  .sb-addon-img {
-    position: absolute;
-    left: 345px;
-    top: 0;
-    height: 100%;
-    width: 200%;
-    overflow: hidden;
-  }
+<ColorPalette>
+    <ColorItem title="Gray Color" subtitle="#c3c7cf" colors={["#c3c7cf"]} />
+    <ColorItem
+        title="Gray Light Color"
+        subtitle="#dfe2eb"
+        colors={["#dfe2eb"]}
+    />
+    <ColorItem
+        title="Gray Dark Color"
+        subtitle="#a7abb4"
+        colors={["#a7abb4"]}
+    />
+    <ColorItem
+        title="Gray Darker Color"
+        subtitle="#8d9199"
+        colors={["#8d9199"]}
+    />
+    <ColorItem
+        title="Gray Text Color"
+        subtitle="#000000"
+        colors={["#000000"]}
+    />
+</ColorPalette>
 
-  .sb-addon-img img {
-    width: 650px;
-    transform: rotate(-15deg);
-    margin-left: 40px;
-    margin-top: -72px;
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0);
-    backface-visibility: hidden;
-  }
+## Border Colors
 
-  @media screen and (max-width: 800px) {
-    .sb-addon-img {
-      left: 300px;
-    }
-  }
+<ColorPalette>
+    <ColorItem title="Border Color" subtitle="#dfe2eb" colors={["#dfe2eb"]} />
+    <ColorItem
+        title="Border Light Color"
+        subtitle="#edf1f9"
+        colors={["#edf1f9"]}
+    />
+    <ColorItem
+        title="Border Dark Color"
+        subtitle="#c3c7cf"
+        colors={["#c3c7cf"]}
+    />
+    <ColorItem
+        title="Border Darker Color"
+        subtitle="#a7abb4"
+        colors={["#a7abb4"]}
+    />
+</ColorPalette>
 
-  @media screen and (max-width: 600px) {
-    .sb-section {
-      flex-direction: column;
-    }
+## Background Colors
 
-    .sb-features-grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    .sb-socials {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .sb-addon {
-      height: 280px;
-      align-items: flex-start;
-      padding-top: 32px;
-      overflow: hidden;
-    }
-
-    .sb-addon-text {
-      padding-left: 24px;
-    }
-
-    .sb-addon-img {
-      right: 0;
-      left: 0;
-      top: 130px;
-      bottom: 0;
-      overflow: hidden;
-      height: auto;
-      width: 124%;
-    }
-
-    .sb-addon-img img {
-      width: 1200px;
-      transform: rotate(-12deg);
-      margin-left: 0;
-      margin-top: 48px;
-      margin-bottom: -40px;
-      margin-left: -24px;
-    }
-  }
-  `}
-</style>
+<ColorPalette>
+    <ColorItem
+        title="Background Color"
+        subtitle="#f8f9ff"
+        colors={["#f8f9ff"]}
+    />
+    <ColorItem
+        title="Background Light Color"
+        subtitle="#ffffff"
+        colors={["#ffffff"]}
+    />
+    <ColorItem
+        title="Background Dark Color"
+        subtitle="#eceef4"
+        colors={["#eceef4"]}
+    />
+    <ColorItem
+        title="Background Darker Color"
+        subtitle="#e1e2e8"
+        colors={["#e1e2e8"]}
+    />
+</ColorPalette>
+```
