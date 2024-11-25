@@ -3,6 +3,8 @@
 }
 //test
 
+
+
 $primaryColor: #72ceff !default;
 $primaryLightColor: #d1e4ff !default;
 $primaryDarkColor: #62b0ff !default;
@@ -123,13 +125,46 @@ $errorMessageBorder: solid $dangerDarkerColor !default;
 $errorMessageTextColor: $primaryTextColor !default;
 $errorMessageIconColor: $dangerDarkerColor !default;
 
+
 // table
 
 $tableHeaderCellPadding: 7px 10px !default;
 $tableBodyCellPadding: 7px 10px !default;
 $tableFooterCellPadding: 7px 10px !default;
 
-//buttons
+
+
+$colors: (
+    "blue": $primaryColor,
+    "green": $successColor,
+    "yellow": $warningColor,
+    "cyan": #06b6d4,
+    "pink": $dangerColor,
+    "indigo": #6366f1,
+    "teal": #14b8a6,
+    "orange": $helpDarkerColor,
+    "bluegray": $grayDarkerColor,
+    "purple": #a855f7,
+    "red": $dangerDarkerColor,
+    "primary": $primaryColor,
+    "secondary": $secondaryColor,
+    "white": #ffffff,
+);
+
+
+
+
+//badge
+
+.p-badge-white {
+  background-color: map-get($colors, "white") !important; // Use your defined gray color
+  color: map-get($colors, "grayTextColor") !important;  // Use your gray text color
+  border: 1px solid #ccc; // Optional: Removes borders
+}
+
+
+
+
 
 @import "./variable";
 @import "./_fonts";

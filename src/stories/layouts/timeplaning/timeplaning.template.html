@@ -100,18 +100,14 @@
                       <div class="flex flex-wrap gap-2">
 
 
+                        <p-badge *ngFor="let day of ['P', 'O', 'T', 'C', 'P', 'S', 'S']; let i = index" [value]="day" [severity]="product.days.includes(i + 1) ? 'secondary' : 'white'" [styleClass]="product.days.includes(i + 1) ? 'font-bold' : 'font-normal'" />
+                        <p-badge *ngFor="let date of product.dates" severity="secondary" [value]="date" ></p-badge>
 
 
-                        <div class="p-buttonset daycalendar">
-                          <p-button *ngFor="let day of ['M', 'T', 'W', 'T', 'F', 'S', 'S']; let i = index" type="button"
-                            [label]="day" size="small" severity="secondary" [outlined]="!product.days.includes(i + 1)">
-                          </p-button>
-                        </div>
 
-                        <div *ngFor="let date of product.dates" class="p-buttonset daycalendar">
-                          <p-button type="button" [outlined]="true" [label]="date" size="small"></p-button>
-                          <p-button icon="pi pi-times" size="small" severity="secondary" styleClass="w-3"></p-button>
-                        </div>
+
+
+
 
 
 
