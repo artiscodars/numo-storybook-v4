@@ -310,25 +310,28 @@
   <div class="flex flex-wrap mb-3 gap-3">
     <div class="flex-initial">
       <label class="block font-bold pb-1">Dienas</label>
-      <div class="p-buttonset daycalendar">
-        <p-button type="button" label="P" severity="secondary"></p-button>
-        <p-button type="button" label="O" severity="secondary"></p-button>
-        <p-button type="button" label="T" severity="secondary" outlined="true"></p-button>
-        <p-button type="button" label="C" severity="secondary"></p-button>
-        <p-button type="button" label="P" severity="secondary" outlined="true"></p-button>
-        <p-button type="button" label="S" severity="secondary" outlined="true"></p-button>
-        <p-button type="button" label="Sv" severity="secondary" outlined="true"></p-button>
+
+      <div class="daycalendar">
+        <p-button type="button" label="P" severity="secondary" rounded="true" size="small"/>
+        <p-button type="button" label="O" severity="secondary" rounded="true" size="small"/>
+        <p-button type="button" label="T" severity="secondary" rounded="true" outlined="true" size="small"/>
+        <p-button type="button" label="C" severity="secondary" rounded="true" size="small"/>
+        <p-button type="button" label="P" severity="secondary" rounded="true"  outlined="true"  size="small"/>
+        <p-button type="button" label="S" severity="secondary" rounded="true" size="small"/>
+        <p-button type="button" label="S" severity="secondary" rounded="true" size="small"/>
+
       </div>
 
     </div>
-    <div class="flex-initial w-full md:w-auto flex-1">
+    <div class="datecalendar">
       <label class="block font-bold pb-1">Datumi</label>
       <div>
-        <p-calendar [(ngModel)]="dates" [selectionMode]="selectionMode" [readonlyInput]="readonlyInput"
-          [firstDayOfWeek]="firstDayOfWeek" styleClass="w-full" />
+        <p-button icon="pi pi-plus" severity="secondary" outlined="true" rounded="true" size="small"/><p-chip label="12.10.2024" removable="true" styleClass="bg-secondary"/>
       </div>
 
+
     </div>
+
   </div>
 
   <!-- Time Range -->

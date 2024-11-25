@@ -162,6 +162,11 @@ $colors: (
   border: 1px solid #ccc; // Optional: Removes borders
 }
 
+.bg-secondary {
+  background-color: map-get($colors, "secondary") !important; // Use your defined secondary color
+  color: map-get($colors, "secondaryTextColor") !important; // Use your secondary text color
+}
+
 
 
 
@@ -353,6 +358,7 @@ body {
   white-space: nowrap;
   button {
     padding: 0.5rem 0.75rem;
+    margin-right: 5px;
 
     span.material-symbols-rounded {
       height: 15px;
@@ -362,6 +368,27 @@ body {
     }
   }
 }
+
+.datecalendar {
+  button {
+    padding: 0.5rem 0.5rem;
+    margin-right: 5px;
+    height: 32px;
+    width: 32px;
+
+    span.material-symbols-rounded {
+      height: 15px;
+      width: 15px;
+      margin-left: -3px;
+      line-height: 0.8;
+    }
+  }
+
+  .p-chip {
+    height: 32px;
+  }
+}
+
 .timepicker {
   padding: 0.4rem 0.65rem;
 }

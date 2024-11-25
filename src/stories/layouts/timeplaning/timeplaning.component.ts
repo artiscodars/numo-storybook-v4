@@ -33,6 +33,8 @@ import { InputTextModule } from 'primeng/inputtext';
 
 import { TimePickerComponent } from '../../components/time-picker/time-picker.component';
 
+
+
 @Component({
   // selector: "numo-timeplaning",
   standalone: true,
@@ -153,4 +155,9 @@ export class AppComponent {
     // Close the dialog
     this.hideAddDataDialog();
   }
+
+
+
 }
+
+
