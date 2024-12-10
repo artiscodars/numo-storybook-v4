@@ -1,277 +1,168 @@
+import { sep } from 'node:path';
+
 export const Menu = [
-    {
-        label: "Mans Numo",
-        expanded: false,
-        items: [
-            {
-                label: "Darbvirsma",
-                items: [],
-                route: "",
-            },
-            {
-                label: "Virsgrāmata",
-                items: [],
+  {
+    label: 'Mana darba vieta',
+    expanded: true,
+    items: [
+      {
+        label: 'Alga',
+        items: [],
 
-                route: "",
-            },
-            {
-                label: "Kase",
-                items: [],
+        route: '',
+      },
+      {
+        label: 'Atvaļinājumi',
 
-                route: "",
-            },
-            {
-                label: "Banka",
-                items: [],
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Mācību pieteikumi',
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Izdevumi',
 
-                route: "",
-            },
-            {
-                label: "Noliktava",
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Komandējumi',
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "LoĢistika",
-                items: [],
-                route: "",
-            },
-            {
-                label: "Kases sistēmas",
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Noderīgi',
+        seperator: true,
+      },
+      {
+        label: 'Atskaites',
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Meklēt kolēģi',
+        items: [],
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "Realizācija",
+        route: '',
+      },
+      {
+        label: 'Prombūtnes kalendārs',
+        items: [],
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "Debitoru novērtēšana",
+        route: '',
+      },
+      {
+        label: 'Ārējās saites',
+        items: [],
+        route: '',
+      },
+    ],
+  },
+  {
+    label: 'Darba rīki',
+    expanded: false,
+    items: [
+      {
+        label: 'Rēķini',
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Esmu iepazinies',
+        items: [],
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "Pamatlīdzekļi",
+        route: '',
+      },
+      {
+        label: 'Darbinieki',
+        items: [],
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "PL un inventāra inventarizācija",
+        route: '',
+      },
+      {
+        label: 'Materiālie resursi',
+        items: [],
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "Algas",
+        route: '',
+      },
+      {
+        label: 'Krājumu norakstīšana',
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "Darba laika plānošana",
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Darba laika uzskaite',
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Darba laika plānošana',
 
-                items: [],
-                route: "",
-            },
-        ],
-    },
-    {
-        label: "Vadība",
-        expanded: false,
-        items: [
-            {
-                label: "Darbvirsma",
-                items: [],
-                route: "",
-            },
-            {
-                label: "Virsgrāmata",
-                items: [],
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Darba plūsmas',
 
-                route: "",
-            },
-            {
-                label: "Kase",
-                items: [],
+        items: [],
+        route: '',
+      },
+    ],
+  },
+  {
+    label: 'Administrēšana',
+    expanded: false,
+    items: [
+      {
+        label: 'Sistēma un uzstādījumi',
+        seperator: true,
+      },
+      {
+        label: 'Lietotāju pārvaldība',
 
-                route: "",
-            },
-            {
-                label: "Banka",
-                items: [],
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Licences pārvaldība',
 
-                route: "",
-            },
-            {
-                label: "Noliktava",
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Moduļi',
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "LoĢistika",
-                items: [],
-                route: "",
-            },
-            {
-                label: "Kases sistēmas",
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Darba laika plānošana',
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "Realizācija",
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Pārvaldība',
+        seperator: true,
+      },
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "Debitoru novērtēšana",
+      {
+        label: 'Organizācijas',
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "Pamatlīdzekļi",
+        items: [],
+        route: '',
+      },
+      {
+        label: 'Serviss',
 
-                items: [],
-                route: "",
-            },
-            {
-                label: "PL un inventāra inventarizācija",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Algas",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Darba laika plānošana",
-
-                items: [],
-                route: "",
-            },
-        ],
-    },
-    {
-        label: " Pro Numo",
-        expanded: true,
-        items: [
-            {
-                label: "Darbvirsma",
-                items: [],
-                route: "",
-            },
-            {
-                label: "Virsgrāmata",
-                items: [],
-
-                route: "",
-            },
-            {
-                label: "Kase",
-                items: [],
-
-                route: "",
-            },
-            {
-                label: "Banka",
-                items: [],
-
-                route: "",
-            },
-            {
-                label: "Noliktava",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "LoĢistika",
-                items: [],
-                route: "",
-            },
-            {
-                label: "Kases sistēmas",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Realizācija",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Debitoru novērtēšana",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Pamatlīdzekļi",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "PL un inventāra inventarizācija",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Algas",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Darba laika plānošana",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Avansa norēkini",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Komandējumi",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Nākamo periodu ieņēmumi/izdevumi",
-
-                items: [],
-            },
-            {
-                label: "Vadības grāmatvedība",
-
-                items: [],
-                route: "",
-            },
-            {
-                label: "Līgumi",
-
-                items: [],
-                route: "",
-            },
-        ],
-    },
+        items: [],
+        route: '',
+      },
+    ],
+  },
 ];
